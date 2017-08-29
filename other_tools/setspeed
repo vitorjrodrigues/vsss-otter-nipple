@@ -1,0 +1,11 @@
+#! /bin/bash
+[ -z "$BOTIP" ] && {
+	echo "Please set BOTIP variable to the robot's IP address."
+	echo ""
+	echo "export BOTIP=192.168.1.222"
+	echo "./setstpeed <left_vel> <right_vel>"
+}
+(
+	printf "\x0Cid:1 left_vel:%0.3f right_vel:%0.3f" "$1" "$2" \
+	| protoc --encode=vss_command.Robot_Command command.proto
+) | nc -i1 $BOTIP 5556

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title>UFPBots - VSSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="NippleJS Mobile Joystick for VSSSBot">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/w3.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,400italic,500|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/angular-1.6.4.min.js"></script>
+	<script type="text/javascript" src="js/protobuf-6.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/nipplejs.min.js"></script>
+</head>
+
+<body id="vsssBotController" ng-controller="vsssBotController">	
+<div class="w3-row">
+<header class="w3-container w3-teal">
+	<h1>O.T.T.E.R. Mobile Dev Page </h1>
+</header>
+	<div class="w3-col w3-panel l4 m6 s12">
+		<div class="w3-card-4">
+			<div class="w3-container w3-border w3-center">
+  				<td><p>Status</p></td>
+				<td><p id="CONN">Connection:</td>
+				<td>{{ online ? "Online" : "Offline" }}</p></td>
+				<tr>
+					<td>           Ping: </td>
+					<td> {{ ping }} ms</td>
+				</tr>
+			</div>		
+			<div class="w3-container w3-border">
+				<br/>Polar:<br>  RADIUS: {{info[0]| number:2}}<br/>  ANGLE(º): {{info[1]| number:1}}º<br/>
+				<br/>Cartesian:<br>  (X,Y) = ({{x| number:0}},{{y| number:0}})<br/>
+				<!--<br/>Speed Vectors:<br/>  (v1,v2) = ({{v1+','+v2}})<br/>-->
+				<!--<br/>Cartesian Sign:<br/>  sign (X,Y) = ({{sX}},{{sY}})<br/>-->
+				<br/>Wheel Speed (%):<br/>  LEFT = {{lvel*100}}%<br/>  RIGHT = {{rvel*100}}%<br/>
+				<!--<br/>Wheel Speed (vector):<br/>  LEFT = {{left_vel_rng}}<br/>  RIGHT = {{right_vel_rng}}<br/>-->
+				<!--<br/><br/>SPEED: {{speed*2}}%-->					
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="w3-container w3-teal">
+  <h6>Sobre</h6>
+  <p>UFPB, CEAR, Engenharia Elétrica. 2017</p>
+</footer> 
+</body>
+
+<script src="myNipple.js"></script>
+<script src="keycustom.js"></script>
+<script src="vsss-bot.js"></script>
+</html>

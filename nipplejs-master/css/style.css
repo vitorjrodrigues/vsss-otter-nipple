@@ -1,0 +1,36 @@
+body{
+  width:80%;margin:auto;
+  font-family: 'Roboto', sans-serif;
+  color: #111111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {color: #0074D9;}
+a:active, a:hover {color: #B10DC9;}
+/*a:visited {color: #85144B;}*/
+
+#console{
+  border-radius:4px;
+  background-color:#efefef;
+  height:5rem;
+  padding: .5rem;
+  margin-top: 50%;
+}
+
+#pressure{
+  border-radius:4px;
+  border: 1px solid #ff3232;
+  padding: .5rem;
+  overflow:auto;
+  color: #ff3232;
+  margin-top:1rem;
+  opacity: 0;
+  text-align:center;
+}

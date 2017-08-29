@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html ng-app="myApp" ng-cloak">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="NippleJS Mobile Joystick Demo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,400italic,500|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/angular-1.6.4.min.js"></script>
+	<script type="text/javascript" src="js/protobuf-6.8.0.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body id="vsssBotController" ng-controller="vsssBotController">
+
+  <h2>nippleJS Demo</h2>
+  <div id="console">Put your thumb on the nipple</div>
+  {{dis+', '+ang+', '+fsc}};
+  <button ng-click="click()"><p id="oi"></p></button>
+  
+
+</body>
+<script src="js/nipplejs.min.js"></script>
+  <script src="js/npjsmain.js"></script>
+  <script src="keycustom.js"></script>
+  <script src="vsss-bot.js"></script>
+</html>
