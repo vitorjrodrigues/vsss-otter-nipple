@@ -30,7 +30,7 @@ make test
 ```bash
 make html
 make -j8
-ESPIP=192.168.1.999 make wiflash
+ESPIP=192.168.0.153 make wiflash
 ```
 4. Control the bot:
   * Via browser, by just navigating tho `ESPIP`.
