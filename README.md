@@ -16,7 +16,7 @@ Easy way: Clone this repo then run `toolchain-setup.sh` from `other_tools`.
 Using
 -----
 
-1. If your ESP8266 is not yet configures for yout wireless network then:
+1. If your ESP8266 is not yet configured for your wireless network then:
   * Set your WiFi credentials in include/private_ssid_config.h.
   * Set `updateWirelessSettings = true` in `main.cpp`.
 2. For initial flashing run
@@ -33,5 +33,5 @@ make -j8
 ESPIP=192.168.0.153 make wiflash
 ```
 4. Control the bot:
-  * Via browser, by just navigating tho `ESPIP`.
+  * Via browser, by just navigating to `ESPIP`.
   * Via protobuf-tcp on port 5556.
