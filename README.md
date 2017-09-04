@@ -9,7 +9,7 @@ Easy way: Clone this repo then run `toolchain-setup.sh` from `other_tools`.
 
 **OR:**
 
-1. Linux OS strongly suggested, just cause.
+1. Linux OS strongly suggested.
 2. Get the toolchain from [my binaries](https://app.cear.ufpb.br/owncloud/index.php/s/LrvHW9WsqGsF3k1/download) or by compiling [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk). Place the `xtensa-lx106-elf` and `esptool` folders under `/opt/espressif/`.
 4. Get the SDK working by cloning (with `--recursive`) [esp-open-rtos](https://github.com/SuperHouse/esp-open-rtos) under `/opt/espressif/`. Once downloaded `cd` to `esp-open-rtos` and run `cppchk.sh --fix` to patch all headers for C++ compatibility.
 
