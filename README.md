@@ -33,5 +33,5 @@ make -j8
 ESPIP=192.168.0.153 make wiflash
 ```
 4. Control the bot:
-  * Via browser, by just navigating to `ESPIP`.
+  * Via browser, by just navigating through `ESPIP`.
   * Via protobuf-tcp on port 5556.
