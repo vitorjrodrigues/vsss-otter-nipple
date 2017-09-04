@@ -12,26 +12,19 @@
 	<script type="text/javascript" src="js/protobuf-6.8.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
-	<script type="text/javascript" src="js/nipplejs.min.js"></script>
+	<script type="text/javascript" src="js/nipplejs.js"></script>
 </head>
 
 <body id="vsssBotController" ng-controller="vsssBotController">	
 <div class="w3-row">
 <header class="w3-container w3-teal">
-	<h1>O.T.T.E.R. Mobile Dev Page </h1>
+	<h1>O.T.T.E.R. Mobile Controller </h1>
 </header>
 	<div class="w3-col w3-panel l4 m6 s12">
 		<div class="w3-card-4">
-			<div class="w3-container w3-border w3-center">
-  				<td><p>Status</p></td>
-				<td><p id="CONN">Connection:</td>
-				<td>{{ online ? "Online" : "Offline" }}</p></td>
-				<tr>
-					<td>           Ping: </td>
-					<td> {{ ping }} ms</td>
-				</tr>
-			</div>		
 			<div class="w3-container w3-border">
+  				<h6>Status</h6>
+				<td>Connection: {{ online ? "Online" : "Offline" }}</td><br/><td>Ping: {{ ping }} ms</td><br/>
 				<br/>Polar:<br>  RADIUS: {{info[0]| number:2}}<br/>  ANGLE(º): {{info[1]| number:1}}º<br/>
 				<br/>Cartesian:<br>  (X,Y) = ({{x| number:0}},{{y| number:0}})<br/>
 				<!--<br/>Speed Vectors:<br/>  (v1,v2) = ({{v1+','+v2}})<br/>-->
@@ -43,10 +36,6 @@
 		</div>
 	</div>
 </div>
-<footer class="w3-container w3-teal">
-  <h6>Sobre</h6>
-  <p>UFPB, CEAR, Engenharia Elétrica. 2017</p>
-</footer> 
 </body>
 
 <script src="myNipple.js"></script>
